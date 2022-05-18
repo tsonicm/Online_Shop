@@ -1,0 +1,45 @@
+/* 
+    Light shades: #FCFBFB;
+    Light accent: #94B9D7;
+    Main color: 3C9AD9;
+    Dark accent: #8C7A8E;
+    Dark shades: #213258;
+    http://colormind.io/bootstrap/
+*/
+
+body {
+    background-color: #FCFBFB;
+    padding: 20px;
+    margin: 0;
+}
+
+p {
+    color: #213258;
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    text-align: left;
+    align-items: center;
+
+    background-color: #3C9AD9;
+    position: sticky;
+    top: 0;
+    height: 35px;
+    left 0;
+}
+
+a.navbarItem {
+    color: #213258;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+a.navbarItem:hover {
+    color: #FCFBFB;
+    background-color: #94B9D7;
+    text-decoration: none;
+}
