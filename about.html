@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project</title>
+        <link rel="stylesheet" href="static/css/style.css">
+        <script charset="UTF-8" type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".navbar").load("static/templates/navbar.html", function() {
+                    $(".navbarItem").attr("onmouseover", "changeActive(this)")
+                                    .attr("onmouseleave", "removeActive(this)", 
+                                    $("#about").addClass("active selector"));
+                });
+            });
+
+
+            function changeActive(x) {
+                var active = document.getElementById("about");
+                active.classList.remove("selector");
+                x.classList.add("selector");
+            }
+
+            function removeActive(x) {
+                var active = document.getElementById("about");
+                active.classList.add("selector");
+                if (x.id != "about") {
+                    x.classList.remove("selector");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar"></div>
+        
+    </body>
+</html>

@@ -4,21 +4,40 @@
         <meta charset="UTF-8">
         <title>Project</title>
         <link rel="stylesheet" href="static/css/style.css">
+        <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".navbar").load("static/templates/navbar.html", function() {
+                    $(".navbarItem").attr("onmouseover", "changeActive(this)")
+                                    .attr("onmouseleave", "removeActive(this)", 
+                                    $("#home").addClass("active selector"));
+                });
+            });
+
+
+            function changeActive(x) {
+                var active = document.getElementById("home");
+                active.classList.remove("selector");
+                x.classList.add("selector");
+            }
+
+            function removeActive(x) {
+                var active = document.getElementById("home");
+                active.classList.add("selector");
+                if (x.id != "home") {
+                    x.classList.remove("selector");
+                }
+            }
+        </script>
     </head>
     <body>
-        <!--Navbar starts here-->
-        <div class="navbar">
-            <a class="navbarItem" href="index.html">Home</a>
-            <a class="navbarItem" href="about.html">About</a>
-            <a class="navbarItem" href="contact.html">Contact</a>
-            <a class="navbarItem" href="login.html">Login</a>
-            <a class="navbarItem" href="register.html">Register</a>
-        </div>
+        <nav class="navbar"></nav>
         <div class="container">
             <div class="header">
                 <h1>Project</h1>
             </div>
             <div class="content">
+
                 <div class="content-left">
                     <div class="content-left-top">
                         <h2>Project</h2>
@@ -39,6 +58,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="content-right">
                     <div class="content-right-top">
                         <h2>Project</h2>
@@ -59,6 +79,7 @@
                         </p>
                     </div>
                 </div>
+
             </div>
             <div class="footer">
                 <p>
@@ -66,75 +87,13 @@
                     Donec euismod, nisl eget consectetur sagittis, nisl nunc
                     consectetur nisl, eget consectetur nisl nunc eget
                     consectetur nisl nunc eget consectetur nisl nunc eget
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec euismod, nisl eget consectetur sagittis, nisl nunc
                     consectetur nisl, eget consectetur nisl nunc eget
                     consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec euismod, nisl eget consectetur sagittis, nisl nunc
-                    consectetur nisl, eget consectetur nisl nunc eget
-                    consectetur nisl nunc eget consectetur nisl nunc eget
-
                 </p>
             </div>
         </div>

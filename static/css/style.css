@@ -1,9 +1,9 @@
 /* 
-    Light shades: #FCFBFB;
-    Light accent: #94B9D7;
-    Main color: 3C9AD9;
-    Dark accent: #8C7A8E;
-    Dark shades: #213258;
+    Light Background: #FCFBFB; White
+    Main color: #011936; Oxford Blue
+    Accent #1: #ED254E; Red Crayola
+    Detail: #2274A5; Star Command Blue | #4A7B9D; Steel Blue
+    Accent #2: #E6AF2E; Goldenrod
     http://colormind.io/bootstrap/
 */
 
@@ -14,32 +14,111 @@ body {
 }
 
 p {
-    color: #213258;
+    color: #011936;
 }
 
 .navbar {
     display: flex;
     overflow: hidden;
-    text-align: left;
+    text-align: center;
     align-items: center;
+    justify-content: center;
 
-    background-color: #3C9AD9;
+    background-color: #011936;
     position: sticky;
     top: 0;
+
+    padding: 10px;
     height: 35px;
-    left 0;
+    border-radius: 5px;
 }
 
 a.navbarItem {
-    color: #213258;
+    color: #FCFBFB;
     text-decoration: none;
     border-radius: 0;
-    padding: 10px 15px;
-    text-align: center;
+    padding: 7px 10px;
 }
 
-a.navbarItem:hover {
+a.hover {
     color: #FCFBFB;
-    background-color: #94B9D7;
+    background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
+    border-radius: 5px;
+}
+
+a.selector {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+a.active {
+    color: #ED254E;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-left-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-left-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-right-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-right-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
