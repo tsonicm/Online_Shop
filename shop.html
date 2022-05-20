@@ -4,27 +4,25 @@
         <meta charset="UTF-8">
         <title>Project</title>
         <link rel="stylesheet" href="static/css/style.css">
-        <script charset="UTF-8" type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/f4a0081dc3.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
                 $(".navbar").load("static/templates/navbar.html", function() {
                     $(".navbarItem").attr("onmouseover", "changeActive(this)")
                                     .attr("onmouseleave", "removeActive(this)", 
-                                    $("#about").addClass("active selector"));
+                                    $("#shop").addClass("active selector"));
                 });
             });
 
-
             function changeActive(x) {
-                var active = document.getElementById("about");
-                active.classList.remove("selector");
                 x.classList.add("selector");
             }
 
             function removeActive(x) {
                 var active = document.getElementById("about");
                 active.classList.add("selector");
-                if (x.id != "about") {
+                if (x.id != "shop") {
                     x.classList.remove("selector");
                 }
             }
