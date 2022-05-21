@@ -18,10 +18,15 @@
     border-radius: 5px;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+    white-space:nowrap;
+}
+
 body {
-    background-color: #F0F0F0;
-    padding: 20px;
     margin: 0;
+    overflow-x: hidden;
 }
 
 p, a {
@@ -43,7 +48,6 @@ p, a {
 
     padding: 10px;
     height: 30px;
-    margin: -20px;
     border-bottom: 1px solid #011936;
 }
 
@@ -165,4 +169,21 @@ a.active {
       
 
 }
-/* Main Content */
+
+/* Footer */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFF;
+    position: absolute;
+    
+    bottom: 0;
+
+    padding: 10px;
+    height: 30px;
+    border-top: 1px solid #011936;
+}
