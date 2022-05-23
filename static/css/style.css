@@ -6,6 +6,11 @@
 
 /* General stylization */
 
+*{
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -21,15 +26,15 @@
 html {
     height: 100%;
     width: 100%;
-    white-space:nowrap;
 }
 
 body {
+    position: relative;
     margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    min-height: 100%;
     overflow-x: hidden;
-}
-
-p, a {
     color: #011936;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -46,9 +51,16 @@ p, a {
     position: sticky;
     top: 0;
 
+    transition: height .3s ease-in-out;
+
     padding: 10px;
-    height: 30px;
+    height: 50px;
     border-bottom: 1px solid #011936;
+    z-index: 100;
+}
+
+.navbarOpen {
+    height: 220px;
 }
 
 .menuItems {
@@ -61,12 +73,12 @@ p, a {
 }
 
 .leftNav {
-    width: 10%;
+    width: 50%;
     padding-left: 15px;
 }
 
 .rightNav {
-    width: 90%;
+    width: 50%;
     text-align: right;
 }
 
@@ -103,19 +115,25 @@ a.active {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+    .navbarOpen
+    {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .navbar {
         align-items: unset;
         flex-direction: column;
-        height: 30px;
     }
     .leftNav {
         margin-top: 1.5px;
-        width: 100%;
+        width: 50%;
     }
     .rightNav {
         width: 100%;
-        text-align: center;
+        text-align: right;
     }
     .menuItems li{
         display: block;
@@ -179,11 +197,14 @@ a.active {
     justify-content: center;
 
     background-color: #FFF;
-    position: absolute;
-    
+    position: absolute; 
     bottom: 0;
+    right: 0;
+    left: 0;
 
     padding: 10px;
-    height: 30px;
+    height: 50px;
     border-top: 1px solid #011936;
+    
+    z-index: 95;
 }

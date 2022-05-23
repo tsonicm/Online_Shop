@@ -4,14 +4,10 @@
         x.setAttribute('aria-expanded', x.classList.contains('opened'));
         var menu = document.getElementsByClassName("navbar")[0];
         if(x.classList.contains('opened')){
-            $(menu).animate({
-                height: '200px'
-            }, 500);
+            document.getElementsByClassName("navbar")[0].classList.add('navbarOpen');
         }
         else{
-            $(menu).animate({
-                height: '30px'
-            }, 500);
+            document.getElementsByClassName("navbar")[0].classList.remove('navbarOpen');
         }
     }
 </script>
