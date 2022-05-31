@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ShoppingLine - Shop</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
         <link rel="stylesheet" href="static/css/shop.css">
         <script src="static/js/f4a0081dc3.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
