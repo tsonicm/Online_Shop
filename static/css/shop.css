@@ -105,11 +105,12 @@
     border-radius:3px;
     border-bottom:3px solid #eb103c;
     box-shadow:1px 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
   }
   
   a.buyButton:hover{
     background:#eb103c;
-    border-bottom:3px solid salmon;
+    border-bottom:3px solid #eb103c;
     color:#f1f2f3;
   }
   

@@ -47,7 +47,7 @@
                         echo "<img src='static/images/".$row["image"]."'>";
                         echo "<figcaption>".$row["name"]."</figcaption>";
                         echo "<span class='price'>$".$row["price"]."</span>";
-                        echo "<a class='buyButton' href='#'>Buy Now</a>";
+                        echo "<a class='buyButton' href='#' onClick='return false;'>Buy Now</a>";
                         echo "</figure>";
                     }
                 } else {
@@ -62,5 +62,6 @@
                 &copy; 2022 Mateian Tudor-Marian
             </p>
         </footer>
+        <script src="static/js/shop.js"></script>
     </body>
 </html>

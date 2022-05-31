@@ -1,41 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ShoppingLine</title>
-        <link rel="stylesheet" href="static/css/cart.css">
-        <script src="static/js/f4a0081dc3.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $(".navbar").load("static/templates/navbar.html", function() {
-                    $(".navbarItem").attr("onmouseover", "changeActive(this)")
-                                    .attr("onmouseleave", "removeActive(this)", 
-                                    $("#cart").addClass("active selector"));
-                });
-            });
-            
-            function changeActive(x) {
-                x.classList.add("selector");
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShoppingLine</title>
+    <link rel="stylesheet" href="static/css/cart.css">
+    <script src="static/js/f4a0081dc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeActive(x) {
+            x.classList.add("selector");
+        }
 
-            function removeActive(x) {
-                var active = document.getElementById("cart");
-                active.classList.add("selector");
-                if (x.id != "cart") {
-                    x.classList.remove("selector");
-                }
+        function removeActive(x) {
+            var active = document.getElementById("cart");
+            active.classList.add("selector");
+            if (x.id != "cart") {
+                x.classList.remove("selector");
             }
-        </script>
-    </head>
-    <body>
-        <nav class="navbar"></nav>
-        
-        <footer id="footer">
-            <p>
-                &copy; 2022 Mateian Tudor-Marian
-            </p>
-        </footer>
-    </body>
+        }
+
+        $(document).ready(function() {
+        $(".navbar").load("static/templates/navbar.html", function() {
+            $(".navbarItem").attr("onmouseover", "changeActive(this)")
+                            .attr("onmouseleave", "removeActive(this)", 
+                            $("#cart").addClass("active selector"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar"></nav>
+    <main>
+        <div class="basket">
+            <div class="basket-labels">
+                <ul class="cart">
+                    <li class="cart item item-heading">Item</li>
+                    <li class="cart price">Price</li>
+                    <li class="cart quantity">Quantity</li>
+                    <li class="cart subtotal">Subtotal</li>
+                </ul>
+            </div>
+            <script>
+                Object.keys(sessionStorage).forEach(function(key) {
+                    var name = key;
+                    var image = key;
+                    name = name.replace(/-/g, ' ');
+                    const tempName = name.split(' ');
+                    for (let i = 0; i < tempName.length; i++) {
+                        tempName[i] = tempName[i].charAt(0).toUpperCase() + tempName[i].slice(1);
+                    }
+                    name = tempName.join(' ');
+                    let price = sessionStorage.getItem(key);
+                    var quantity = price.substring(price.search(' ') + 1);
+                    price = price.substring(0, price.search(' '));
+                    document.getElementsByClassName("basket")[0].innerHTML+= `<div class="basket-product">
+                                        <div class="item">
+                                            <div class="product-image">
+                                                <img src="static/images/${image}.webp" alt="${name}" class="product-frame">
+                                            </div>
+                                            <div class="product-details">
+                                                <h1><strong><span class="item-quantity">${quantity}</span> x ${name}</strong> Pattern</h1>
+                                            </div>
+                                        </div>
+                                        <div class="price">${price.slice(1)}.00</div>
+                                        <div class="quantity">
+                                            <input type="number" value="${quantity}" min="1" class="quantity-field">
+                                        </div>
+                                        <div class="subtotal">${price.slice(1) * quantity}.00</div>
+                                        <div class="remove">
+                                            <button>Remove</button>
+                                        </div>
+                                    </div>`;
+                });
+            </script>
+        </div>
+        <aside>
+            <div class="summary">
+                <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+                <div class="summary-total">
+                    <div class="total-title">Total</div>
+                    <div class="total-value final-value" id="basket-total">0.00</div>
+                </div>
+                <div class="summary-checkout">
+                    <button class="checkoutButton checkout-cta">Go to Secure Checkout</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer id="footer">
+        <p>
+            &copy; 2022 Mateian Tudor-Marian
+        </p>
+    </footer>
+    <script src="static/js/cart.js"></script>
+</body>
+
 </html>

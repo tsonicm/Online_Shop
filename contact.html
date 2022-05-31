@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ShoppingLine</title>
+        <link rel="stylesheet" href="static/css/index.css">
+        <script src="static/js/f4a0081dc3.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".navbar").load("static/templates/navbar.html", function() {
+                    $(".navbarItem").attr("onmouseover", "changeActive(this)")
+                                    .attr("onmouseleave", "removeActive(this)", 
+                                    $("#contact").addClass("active selector"));
+                });
+            });
+            
+            function changeActive(x) {
+                x.classList.add("selector");
+            }
+
+            function removeActive(x) {
+                var active = document.getElementById("contact");
+                active.classList.add("selector");
+                if (x.id != "contact") {
+                    x.classList.remove("selector");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar"></nav>
+        <div class = "content"> 
+           <h1>Contact Page</h1>
+            <p>
+                placeholder
+            </p>
+        </div>
+        <footer id="footer">
+            <p>
+                &copy; 2022 Mateian Tudor-Marian
+            </p>
+        </footer>
+    </body>
+</html>
