@@ -1,5 +1,4 @@
 <?php
-    //validate the user and if invalid, show error message
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn = new mysqli("localhost", "root", "", "ewd");
         if ($conn->connect_error) {
