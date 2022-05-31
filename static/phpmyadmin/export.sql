@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2022 at 07:18 PM
+-- Generation Time: May 31, 2022 at 02:58 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.5
 
@@ -33,16 +33,16 @@ CREATE TABLE `imagedb` (
 --
 
 INSERT INTO `imagedb` (`ID`, `image`, `name`, `price`) VALUES
-(1, '5-dots.png', '5 Dots Pattern', 5),
+(1, '5-dots.webp', '5 Dots Pattern', 5),
 (2, 'circle-blues.webp', 'Circle Blues Pattern', 10),
 (3, 'cork-board.webp', 'Cork Board Pattern', 10),
 (4, 'wheat.webp', 'Wheat Pattern', 10),
-(5, 'pink-flowers.webp', 'Pink Flower Pattern', 5),
+(5, 'pink-flower.webp', 'Pink Flower Pattern', 5),
 (6, 'washi.webp', 'Washi Pattern', 5),
-(7, 'food.png', 'Food Pattern', 5),
+(7, 'food.webp', 'Food Pattern', 5),
 (8, 'watercolor.webp', 'Watercolor Pattern', 5),
-(9, 'bush.png', 'Bush Pattern', 5),
-(10, 'y-so-serious-white.png', 'Y so serious Pattern', 5),
+(9, 'bush.webp', 'Bush Pattern', 5),
+(10, 'y-so-serious.webp', 'Y so serious Pattern', 5),
 (11, 'dark-grey-terrazzo.webp', 'Dark Grey Terrazzo Pattern', 10),
 (12, 'darkness.webp', 'Darkness Pattern', 5);
 
